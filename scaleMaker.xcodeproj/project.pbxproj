@@ -13,6 +13,13 @@
 		AF4ACFCE2BCF70B500DA383E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4ACFCC2BCF70B500DA383E /* Main.storyboard */; };
 		AF4ACFD02BCF70B700DA383E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4ACFCF2BCF70B700DA383E /* Assets.xcassets */; };
 		AF4ACFD32BCF70B700DA383E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4ACFD12BCF70B700DA383E /* LaunchScreen.storyboard */; };
+		AF4ACFE22BCF9BEC00DA383E /* FX_piano_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF4ACFDB2BCF9BEC00DA383E /* FX_piano_6.mp3 */; };
+		AF4ACFE32BCF9BEC00DA383E /* FX_piano_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF4ACFDC2BCF9BEC00DA383E /* FX_piano_2.mp3 */; };
+		AF4ACFE42BCF9BEC00DA383E /* FX_piano_5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF4ACFDD2BCF9BEC00DA383E /* FX_piano_5.mp3 */; };
+		AF4ACFE52BCF9BEC00DA383E /* FX_piano_0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF4ACFDE2BCF9BEC00DA383E /* FX_piano_0.mp3 */; };
+		AF4ACFE62BCF9BEC00DA383E /* FX_piano_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF4ACFDF2BCF9BEC00DA383E /* FX_piano_1.mp3 */; };
+		AF4ACFE72BCF9BEC00DA383E /* FX_piano_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF4ACFE02BCF9BEC00DA383E /* FX_piano_3.mp3 */; };
+		AF4ACFE82BCF9BEC00DA383E /* FX_piano_4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF4ACFE12BCF9BEC00DA383E /* FX_piano_4.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		AF4ACFCF2BCF70B700DA383E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF4ACFD22BCF70B700DA383E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF4ACFD42BCF70B700DA383E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF4ACFDB2BCF9BEC00DA383E /* FX_piano_6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FX_piano_6.mp3; path = ../../../../../Downloads/piano/FX_piano_6.mp3; sourceTree = "<group>"; };
+		AF4ACFDC2BCF9BEC00DA383E /* FX_piano_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FX_piano_2.mp3; path = ../../../../../Downloads/piano/FX_piano_2.mp3; sourceTree = "<group>"; };
+		AF4ACFDD2BCF9BEC00DA383E /* FX_piano_5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FX_piano_5.mp3; path = ../../../../../Downloads/piano/FX_piano_5.mp3; sourceTree = "<group>"; };
+		AF4ACFDE2BCF9BEC00DA383E /* FX_piano_0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FX_piano_0.mp3; path = ../../../../../Downloads/piano/FX_piano_0.mp3; sourceTree = "<group>"; };
+		AF4ACFDF2BCF9BEC00DA383E /* FX_piano_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FX_piano_1.mp3; path = ../../../../../Downloads/piano/FX_piano_1.mp3; sourceTree = "<group>"; };
+		AF4ACFE02BCF9BEC00DA383E /* FX_piano_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FX_piano_3.mp3; path = ../../../../../Downloads/piano/FX_piano_3.mp3; sourceTree = "<group>"; };
+		AF4ACFE12BCF9BEC00DA383E /* FX_piano_4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FX_piano_4.mp3; path = ../../../../../Downloads/piano/FX_piano_4.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 		AF4ACFC52BCF70B500DA383E /* scaleMaker */ = {
 			isa = PBXGroup;
 			children = (
+				AF4ACFDA2BCF9BB600DA383E /* Resouces */,
 				AF4ACFC62BCF70B500DA383E /* AppDelegate.swift */,
 				AF4ACFC82BCF70B500DA383E /* SceneDelegate.swift */,
 				AF4ACFCA2BCF70B500DA383E /* ViewController.swift */,
@@ -65,6 +80,20 @@
 				AF4ACFD42BCF70B700DA383E /* Info.plist */,
 			);
 			path = scaleMaker;
+			sourceTree = "<group>";
+		};
+		AF4ACFDA2BCF9BB600DA383E /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				AF4ACFDE2BCF9BEC00DA383E /* FX_piano_0.mp3 */,
+				AF4ACFDF2BCF9BEC00DA383E /* FX_piano_1.mp3 */,
+				AF4ACFDC2BCF9BEC00DA383E /* FX_piano_2.mp3 */,
+				AF4ACFE02BCF9BEC00DA383E /* FX_piano_3.mp3 */,
+				AF4ACFE12BCF9BEC00DA383E /* FX_piano_4.mp3 */,
+				AF4ACFDD2BCF9BEC00DA383E /* FX_piano_5.mp3 */,
+				AF4ACFDB2BCF9BEC00DA383E /* FX_piano_6.mp3 */,
+			);
+			path = Resouces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +154,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4ACFE72BCF9BEC00DA383E /* FX_piano_3.mp3 in Resources */,
+				AF4ACFE62BCF9BEC00DA383E /* FX_piano_1.mp3 in Resources */,
+				AF4ACFE52BCF9BEC00DA383E /* FX_piano_0.mp3 in Resources */,
 				AF4ACFD32BCF70B700DA383E /* LaunchScreen.storyboard in Resources */,
+				AF4ACFE22BCF9BEC00DA383E /* FX_piano_6.mp3 in Resources */,
 				AF4ACFD02BCF70B700DA383E /* Assets.xcassets in Resources */,
 				AF4ACFCE2BCF70B500DA383E /* Main.storyboard in Resources */,
+				AF4ACFE42BCF9BEC00DA383E /* FX_piano_5.mp3 in Resources */,
+				AF4ACFE32BCF9BEC00DA383E /* FX_piano_2.mp3 in Resources */,
+				AF4ACFE82BCF9BEC00DA383E /* FX_piano_4.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
