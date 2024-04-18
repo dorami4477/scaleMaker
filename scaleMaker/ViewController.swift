@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     let circleColor06:CGColor = UIColor(red: 0.80, green: 0.67, blue: 0.92, alpha: 1.00).cgColor
     let circleColor07:CGColor = UIColor(red: 0.96, green: 0.76, blue: 0.95, alpha: 1.00).cgColor
 
-    
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         titleTextField.delegate = self
@@ -104,6 +104,7 @@ class ViewController: UIViewController {
             
         }else if sender.titleLabel!.text!  == "play" {
             //플레이 모드로 전환
+            doSomethingAfter1Second()
             slider.isEnabled = false
             timer?.invalidate()
             timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(doSomethingAfter1Second), userInfo: nil, repeats: true)
@@ -122,7 +123,6 @@ class ViewController: UIViewController {
             slider.isEnabled = false
             scale[index].layer.backgroundColor = circleColor[index]
             index += 1
-            print(slider.isEnabled)
         }else{
             //스탑 모드로 전환
             scale[6].layer.backgroundColor = UIColor.lightGray.cgColor
@@ -131,13 +131,12 @@ class ViewController: UIViewController {
             slider.isEnabled = true
             stopSound()
             index = 0
-            print(slider.isEnabled)
         }
     }
 
     
     
-    // mp3 소리 파일 가져오기
+    // mp3 사운드 파일 가져오기
     func playSoundPiano0(index:Int) {
         let soundName = "FX_piano_\(index)"
         guard let url = Bundle.main.url(forResource: soundName, withExtension: "mp3") else { return }
@@ -156,7 +155,7 @@ class ViewController: UIViewController {
 }
 
 
-//텍스트 델리게이트
+// MARK: - EXTENSION 텍스트 델리게이트
 extension ViewController:UITextFieldDelegate{
     //재 입력시 경고 문제 안보이게
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
