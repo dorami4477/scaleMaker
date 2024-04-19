@@ -25,15 +25,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var playButton: UIButton!
-    
-    var soundPlayer: AVAudioPlayer?
-    var timer: Timer?
-    var index = 0
-    var speed: Double = 1
-    
-    var scale:[UIStackView] = []
-    var circleColor:[CGColor] = []
-    
+        
     //scale의 컬러
     let circleColor01:CGColor = UIColor(red: 0.94, green: 0.62, blue: 0.65, alpha: 1.00).cgColor
     let circleColor02:CGColor = UIColor(red: 0.96, green: 0.79, blue: 0.58, alpha: 1.00).cgColor
@@ -42,7 +34,17 @@ class ViewController: UIViewController {
     let circleColor05:CGColor = UIColor(red: 0.78, green: 0.79, blue: 1.00, alpha: 1.00).cgColor
     let circleColor06:CGColor = UIColor(red: 0.80, green: 0.67, blue: 0.92, alpha: 1.00).cgColor
     let circleColor07:CGColor = UIColor(red: 0.96, green: 0.76, blue: 0.95, alpha: 1.00).cgColor
+    
+    //스케일과 컬러 배열에 넣기
+    lazy var scale:[UIStackView] = [scale01, scale02,scale03,scale04,scale05,scale06,scale07]
+    lazy var circleColor:[CGColor] = [circleColor01, circleColor02,circleColor03,circleColor04,circleColor05,circleColor06,circleColor07]
 
+    var soundPlayer: AVAudioPlayer?
+    var timer: Timer?
+    var index = 0
+    var speed: Double = 1
+    
+    
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,10 +59,6 @@ class ViewController: UIViewController {
         playButton.layer.cornerRadius = 7
         playButton.clipsToBounds = true
         
-        //스케일과 컬러 배열에 넣기
-        scale.append(contentsOf: [scale01, scale02,scale03,scale04,scale05,scale06,scale07])
-        circleColor.append(contentsOf: [circleColor01, circleColor02,circleColor03,circleColor04,circleColor05,circleColor06,circleColor07])
-        
         titleTextField.placeholder = "제목을 입력하세요."
         textFieldWarning.isHidden = true
         
@@ -69,6 +67,12 @@ class ViewController: UIViewController {
             $0.layer.cornerRadius = $0.frame.size.width / 2 //??큰 아이폰에서는 원이 깨지는 이유를 모르겠음?
             $0.clipsToBounds = true
         }
+        
+        /* 스케일 원으로 만들기 다른 방법
+        scale.forEach { scale in
+            scale.layer.cornerRadius = scale.frame.size.width / 2
+            scale.clipsToBounds = true
+        }*/
     }
 
     
