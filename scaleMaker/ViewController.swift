@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     let circleColor07:CGColor = UIColor(red: 0.96, green: 0.76, blue: 0.95, alpha: 1.00).cgColor
     
     //스케일과 컬러 배열에 넣기
-    lazy var scale:[UIStackView] = [scale01, scale02,scale03,scale04,scale05,scale06,scale07]
+    lazy var scales:[UIStackView] = [scale01, scale02,scale03,scale04,scale05,scale06,scale07]
     lazy var circleColor:[CGColor] = [circleColor01, circleColor02,circleColor03,circleColor04,circleColor05,circleColor06,circleColor07]
 
     var soundPlayer: AVAudioPlayer?
@@ -51,6 +51,23 @@ class ViewController: UIViewController {
         titleTextField.delegate = self
         setupUI()
     }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // 스케일 원으로 만들기
+        scales = scales.map{
+            $0.layer.cornerRadius = $0.frame.size.width / 2 //??큰 아이폰에서는 원이 깨지는 이유를 모르겠음?
+            $0.clipsToBounds = true
+            return $0
+        }
+        
+        /* 스케일 원으로 만들기 다른 방법
+         scales.forEach { scale in
+            scale.layer.cornerRadius = scale.frame.size.width / 2
+            scale.clipsToBounds = true
+        }*/
+    }
     
     func setupUI(){
         //버튼들 코너 라운드
@@ -62,17 +79,7 @@ class ViewController: UIViewController {
         titleTextField.placeholder = "제목을 입력하세요."
         textFieldWarning.isHidden = true
         
-        // 스케일 원으로 만들기
-        let _: [()] = scale.map{
-            $0.layer.cornerRadius = $0.frame.size.width / 2 //??큰 아이폰에서는 원이 깨지는 이유를 모르겠음?
-            $0.clipsToBounds = true
-        }
-        
-        /* 스케일 원으로 만들기 다른 방법
-        scale.forEach { scale in
-            scale.layer.cornerRadius = scale.frame.size.width / 2
-            scale.clipsToBounds = true
-        }*/
+
     }
 
     
@@ -120,16 +127,16 @@ class ViewController: UIViewController {
         if index < 7 {
             //플레이 모드로 전환
             if index > 0 {
-                scale[index - 1].layer.backgroundColor = UIColor.lightGray.cgColor
+                scales[index - 1].layer.backgroundColor = UIColor.lightGray.cgColor
             }
             playSoundPiano0(index:index)
             playButton.setTitle("stop", for: .normal)
             slider.isEnabled = false
-            scale[index].layer.backgroundColor = circleColor[index]
+            scales[index].layer.backgroundColor = circleColor[index]
             index += 1
         }else{
             //스탑 모드로 전환
-            scale[6].layer.backgroundColor = UIColor.lightGray.cgColor
+            scales[6].layer.backgroundColor = UIColor.lightGray.cgColor
             timer?.invalidate()
             playButton.setTitle("play", for: .normal)
             slider.isEnabled = true
